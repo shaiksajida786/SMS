@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Spam Detection</title>
+    <style>
+        /* Basic styling for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #bcc17cf6;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('home')">Home</a></li>
+            <li><a href="#" onclick="showContent('about')">About Us</a></li>
+            <li><a href="#" onclick="showContent('prediction')">Email Prediction</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Home</h2>
+        <!-- Your Home content goes here -->
+    </section>
+    <section id="about" style="display: none;">
+        <h2>About Us</h2>
+        <!-- Your About Us content goes here -->
+    </section>
+    <section id="prediction" style="display: none;">
+        <h2>Email Prediction</h2>
+        <!-- Your Email Prediction content goes here -->
+    </section>
+
+    <script>
+        function showContent(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
